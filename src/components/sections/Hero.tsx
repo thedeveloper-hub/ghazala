@@ -48,12 +48,15 @@ export default function Hero() {
       </div>
 
       {/* Animated Blobs */}
-      <motion.div
-        className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] rounded-full opacity-40 pointer-events-none"
-        style={{ background: 'radial-gradient(circle, rgba(42,95,143,0.25), transparent)', y: blob1Y }}
-        animate={blobAnimation(0).animate}
-        style={{ filter: 'blur(80px)', y: blob1Y }}
-      />
+    <motion.div
+  className="absolute top-[-10%] right-[-5%] w-[420px] h-[420px] rounded-full opacity-40 pointer-events-none"
+  animate={blobAnimation(0).animate}
+  style={{
+    background: 'radial-gradient(circle, rgba(42,95,143,0.25), transparent)',
+    filter: 'blur(80px)',
+    y: blob1Y,
+  }}
+/>
       <motion.div
         className="absolute bottom-[10%] left-[-5%] w-[350px] h-[350px] rounded-full opacity-40 pointer-events-none"
         style={{ background: 'radial-gradient(circle, rgba(184,134,11,0.2), transparent)', filter: 'blur(80px)', y: blob2Y }}
