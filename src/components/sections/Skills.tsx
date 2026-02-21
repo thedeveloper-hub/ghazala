@@ -34,14 +34,22 @@ function SkillCard({ skill, index }: { skill: Skill; index: number }) {
 
       {/* Skill bar */}
       <div className="h-0.5 rounded-full mt-3 overflow-hidden relative" style={{ background: 'var(--border)' }}>
-        <motion.div
-          className="h-full rounded-full"
-          style={{ background: 'linear-gradient(90deg, var(--accent), var(--accent3))' }}
-          initial={{ scaleX: 0 }}
-          whileInView={{ scaleX: skill.proficiency, transition: { duration: 0.9, delay: index * 0.07 + 0.3, ease: [0.4,0,0.2,1] } }}
-          viewport={{ once: true }}
-          style={{ background: 'linear-gradient(90deg, var(--accent), var(--accent3))', transformOrigin: 'left' }}
-        />
+       <motion.div
+  className="h-2 rounded-full"
+  whileInView={{
+    scaleX: skill.proficiency,
+    transition: {
+      duration: 0.9,
+      delay: index * 0.07 + 0.3,
+      ease: [0.4, 0, 0.2, 1],
+    },
+  }}
+  viewport={{ once: true }}
+  style={{
+    background: 'linear-gradient(90deg, var(--accent), var(--accent3))',
+    transformOrigin: 'left',
+  }}
+/>
       </div>
     </motion.div>
   )
